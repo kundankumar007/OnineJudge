@@ -1,0 +1,3 @@
+Migrations for 'onlineJudge':
+  onlineJudge\migrations\0002_alter_questions_tags.py
+    - Alter field tags on questions
