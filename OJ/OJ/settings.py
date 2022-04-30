@@ -1,8 +1,14 @@
 
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
+
+
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -10,6 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-%&#$!ei@-!yo-1vd57)e=*zdsi&#4ts6yj3f%sp=3x&(=l*mid'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -26,7 +33,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'onlineJudge.apps.OnlinejudgeConfig'
+    'onlineJudge.apps.OnlinejudgeConfig',
+    'evaluation.apps.EvaluationConfig'
+
 ]
 
 MIDDLEWARE = [

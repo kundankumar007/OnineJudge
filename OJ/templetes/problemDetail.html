@@ -1,8 +1,9 @@
-{% extends 'main.html' %}
 
 {% block content %}
 
-<h1>problemdetails templete</h1>
+<form method='post' action="submit">
+    {% csrf_token %}
+    {{form.as_p}}
 <div>
 
 
@@ -11,15 +12,25 @@
         <h5>{{problem.questionName}}  -- --{{problem.difficulty}}</h5>
         <span>{{problem.questionStatement}}</span>
         <h6>{{problem.tags}}</h6>
+        <br>
         <div>
-            <textarea name="solution" id="" cols="30" rows="10"></textarea>
+            <label for="language">language</label>
+
+<select  name="langChoice">
+    {%for languages in language%}
+  <option  name ="{{languages}}" value="{{languages}}">{{languages}}</option>
+  {% endfor %}
+</select>
+<br>
+            <textarea name="solution"  cols="150" rows="30"></textarea>
+            <br>
             <button>submit</button>
         </div>
     </div>
     
 </div>
+</form>
 
-</div>
 {% endblock content %}
 
 
