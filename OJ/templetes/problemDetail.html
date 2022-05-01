@@ -4,15 +4,20 @@
 <form method='post' action="submit">
     {% csrf_token %}
     {{form.as_p}}
-<div>
 
 
 
-    <div>
-        <h5>{{problem.id}}--{{problem.questionName}} <br> {{problem.difficulty}}</h5>
-        <span>{{problem.questionStatement}}</span>
-        <h6>{{problem.tags}}</h6>
-        <br>
+
+    <div class="flex-container" style="display: flex;">
+
+        <div>
+            <h5>{{problem.id}}--{{problem.questionName}} <br> {{problem.difficulty}}</h5>
+            <section> <p> {{problem.questionStatement}}</p></section>
+           
+            <h6>{{problem.tags}}</h6>
+            <br>
+        </div>
+        
         <div>
             <label for="language">language</label>
 
@@ -28,7 +33,7 @@
         </div>
     </div>
     
-</div>
+
 </form>
 
 {% endblock content %}

@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'onlineJudge.apps.OnlinejudgeConfig',
-    'evaluation.apps.EvaluationConfig'
+  
 
 ]
 
