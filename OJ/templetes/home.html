@@ -5,14 +5,14 @@
 
 <div>
 
-    <a href ="create-problem/"> create problem</a>
+ 
     
     <div>
         {% for problems in problem %}
         <form method="POST">
             {% csrf_token %}
         <div>
-            <h5><a href="problem/{{problems.id}}">{{problems.id}}--{{problems.questionName}} </a> --{{problems.tags}} --{{problems.difficulty}}</h5>
+            <h5><a href="problem/{{problems.id}}">{{problems.questionName}} </a> --{{problems.tags}} --{{problems.difficulty}}</h5>
         </div>
         </form>
         {% endfor %}
